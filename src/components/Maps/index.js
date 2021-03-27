@@ -9,12 +9,11 @@ const Wrapper = styled.main`
 `;
 
 export default function MapComponent({ children, ...props }) {
-  console.log(process.env.REACT_APP_GOOGLE_API)
   return (
     <Wrapper>
       <GoogleMapReact
         bootstrapURLKeys={{
-          key: "",
+          key: process.env.REACT_APP_GOOGLE_API,
           language: 'en'
         }}
         {...props}

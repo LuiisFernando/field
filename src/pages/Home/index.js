@@ -28,7 +28,6 @@ function Home() {
     useEffect(() => {
         async function loadData() {
             const { data } = await api.get('v2/networks');
-            console.log(data.networks);
             setNetworks(data.networks);
 
             const networkCountByCountry = new Map();
@@ -46,7 +45,6 @@ function Home() {
             const networkCountByCountryArray = [...networkCountByCountry.values()]
 
             setNetworkByCountry(networkCountByCountryArray);
-            console.log(networkCountByCountryArray);
         }
 
         loadData();
@@ -60,8 +58,6 @@ function Home() {
         const networkCountry = networkByCountry.find(x => x.id === country);
 
         const stationResponse = await api.get(network.href);
-
-        console.log(stationResponse.data.network.stations);
 
         const stati = stationResponse.data.network.stations.length > 0 ? stationResponse.data.network.stations.map(station => {
             return {
