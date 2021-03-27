@@ -9,7 +9,7 @@ const Wrapper = styled.main`
 `;
 
 export default function MapComponent({ children, ...props }) {
-  console.log(process.env.REACT_APP_NOT_SECRET_CODE)
+  console.log(process.env.REACT_APP_GOOGLE_API)
   return (
     <Wrapper>
       <GoogleMapReact
