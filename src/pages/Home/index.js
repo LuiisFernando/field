@@ -69,7 +69,6 @@ function Home() {
                 open: false
             }
         }) : null;
-        debugger
         setStations(stati);
         setSelectedNetwork(network);
         setShowModal(true);
