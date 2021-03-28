@@ -2,7 +2,7 @@
 
 this project is a challenge received
 
-to run the the project, you need to install de dependencies with
+to run the project, you need to install de dependencies with
 
 ```
 yarn
