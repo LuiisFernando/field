@@ -24,4 +24,8 @@ or
 
 ```
 npm start
-``` 
+```
+
+the project is using google-map-react lib to render the map, so you need to add a valid google map key.
+
+add a new .env file with the key ```REACT_APP_GOOGLE_API``` with the correct value.
