@@ -121,7 +121,6 @@ function Home() {
                                     <p><span>City:</span> {selectedNetwork.location.city}</p>
                                     <p><span>Company:</span> {selectedNetwork.company ? selectedNetwork.company.join(', ') : 'no company'}</p>
                                     <p><span>Total Networks of this country:</span> {countNetworkByCountry}</p>
-
                                     <p><span>Total stations of this network:</span> {stations ? stations.length : 0}</p>
                                 </div>
 
