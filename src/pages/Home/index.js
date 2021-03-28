@@ -119,7 +119,7 @@ function Home() {
                                     <h2>Network info</h2>
                                     <p><span>Contry:</span> {selectedNetwork.location.country}</p>
                                     <p><span>City:</span> {selectedNetwork.location.city}</p>
-                                    <p><span>Company:</span> {selectedNetwork.company ? selectedNetwork.company.join(', ') : 'no company'}</p>
+                                    <p><span>{selectedNetwork.company && selectedNetwork.company.length === 1 ? 'Company' : 'Companies'}:</span> {selectedNetwork.company ? selectedNetwork.company.join(', ') : 'no company'}</p>
                                     <p><span>Total Networks of this country:</span> {countNetworkByCountry}</p>
                                     <p><span>Total stations of this network:</span> {stations ? stations.length : 0}</p>
                                 </div>
