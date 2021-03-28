@@ -18,7 +18,8 @@ export const Container = styled.div`
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-
+        cursor: pointer;
+        font-weight: bold;
         transition: all 0.4s ease;
     }
 
@@ -32,6 +33,15 @@ export const Container = styled.div`
         overflow-y: hidden;
         transition: all 0.4s ease;
         background: #FFF;
+
+        span {
+            font-weight: bold;
+        }
+
+        p {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
     }
 
     .containerAcc.open .content {

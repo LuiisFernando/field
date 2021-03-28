@@ -18,8 +18,8 @@ export const Modal = styled.div`
         position: relative;
         max-width: 900px;
         width: 900px;
-        height: 80vh;
-        background: gainsboro;
+        height: 70vh;
+        background: #f2f2f2;
         border-radius: 10px;
         margin: 0 auto;
         margin-top: 100px;
@@ -46,6 +46,26 @@ export const Modal = styled.div`
             display: flex;
             flex-direction: column;
         }
+
+        .info-container {
+            padding-left: 25px;
+
+            span {
+                font-weight: bold;
+            }
+
+            p {
+                margin-bottom: 10px;
+                font-size: 14px;
+            }
+
+            h2 {
+                text-align: center;
+                margin-bottom: 20px;
+                font-size: 30px;
+            }
+        }
+
         .station-container {
             margin-top: 40px;
             width:100%;
@@ -57,6 +77,36 @@ export const Modal = styled.div`
             display: flex;
             flex: 1;
             flex-wrap: wrap;
+
+            h2 {
+                padding-left: 25px;
+                margin-bottom: 20px;
+                font-size: 20px;
+            }
+
+
+            ::-webkit-scrollbar {
+                width: 5px;
+            }
+            ::-webkit-scrollbar-track {
+                background: #f1f1f1; 
+            }
+            
+            ::-webkit-scrollbar-thumb {
+                background: #888; 
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #555; 
+            }
+        }
+
+        .no-station {
+            margin: 150px auto;
+
+            .station-title {
+                display: none;
+            }
         }
 
     }

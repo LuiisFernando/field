@@ -19,8 +19,8 @@ function Home() {
 
     const defaultProps = {
         center: {
-            lat: -23.5561884,
-            lng: -46.6616899
+            lat: 31.9180415,
+            lng: 3.2893023
         },
         zoom: 1
     };
@@ -78,7 +78,6 @@ function Home() {
     }
 
     function toggleStation(index) {
-        console.log('toggled ', index)
         setStations(
             stations.map((station, i) => {
                 if (i === index) {
@@ -118,28 +117,30 @@ function Home() {
                     <div className="modal-body">
                         {selectedNetwork && (
                             <>
-                                <p>Contry: {selectedNetwork.location.country}</p>
-                                <p>City: {selectedNetwork.location.city}</p>
-                                <p>Company: {selectedNetwork.company.join(', ')}</p>
-                                <p>Total Networks of this country: {countNetworkByCountry}</p>
+                                <div className="info-container">
+                                    <h2>Network info</h2>
+                                    <p><span>Contry:</span> {selectedNetwork.location.country}</p>
+                                    <p><span>City:</span> {selectedNetwork.location.city}</p>
+                                    <p><span>Company:</span> {selectedNetwork.company ? selectedNetwork.company.join(', ') : 'no company'}</p>
+                                    <p><span>Total Networks of this country:</span> {countNetworkByCountry}</p>
 
-                                <p>Total stations of this network: {stations ? stations.length : 0}</p>
+                                    <p><span>Total stations of this network:</span> {stations ? stations.length : 0}</p>
+                                </div>
 
 
-                                <div className="station-container">
+                                <div className={stations ? "station-container" : "no-station"}>
+                                    <h2 className="station-title">Stations</h2>
                                     {stations ? (
                                         stations.map((station, index) => (
                                             <Accordion
                                                 key={index}
                                                 index={index}
-                                                title={station.name}
-                                                open={station.open}
-                                                content={station.name}
+                                                station={station}
                                                 toggle={toggleStation}
                                             />
                                         )
                                         )) : (
-                                        <h1>There's no station to this network</h1>
+                                        <h2>There's no station to this network</h2>
                                     )}
                                 </div>
 
