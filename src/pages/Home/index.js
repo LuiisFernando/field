@@ -102,8 +102,6 @@ function Home() {
                         key={index}
                         lat={net.location.latitude}
                         lng={net.location.longitude}
-                        city={net.location.city}
-                        country={net.location.country}
                         network={net}
                         onClick={markerClick}
                     />

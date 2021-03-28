@@ -2,12 +2,12 @@ import React from 'react';
 
 import * as Styled from './style';
 
-function Marker({ city, network, onClick, country }) {
+function Marker({ network, onClick }) {
 
     return (
         <>
             <Styled.Wrapper
-                alt={city}
+                alt={network.location.city}
                 onClick={() => onClick(network)}
             />
         </>
