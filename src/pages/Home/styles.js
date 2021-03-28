@@ -45,6 +45,16 @@ export const Modal = styled.div`
             z-index: 2;
             display: flex;
             flex-direction: column;
+
+            h2 {
+                padding-left: 25px;
+                margin-bottom: 20px;
+                font-size: 20px;
+                margin-top: 40px;
+            }
+            h2.no-station {
+                display: none;
+            }
         }
 
         .info-container {
@@ -67,7 +77,6 @@ export const Modal = styled.div`
         }
 
         .station-container {
-            margin-top: 40px;
             width:100%;
             max-height: 95%;
             height: 95%;
@@ -77,12 +86,6 @@ export const Modal = styled.div`
             display: flex;
             flex: 1;
             flex-wrap: wrap;
-
-            h2 {
-                padding-left: 25px;
-                margin-bottom: 20px;
-                font-size: 20px;
-            }
 
 
             ::-webkit-scrollbar {

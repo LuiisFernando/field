@@ -125,8 +125,9 @@ function Home() {
                                 </div>
 
 
+                                <h2 className={stations ? "station-title" : "no-station"}>Stations</h2>
+
                                 <div className={stations ? "station-container" : "no-station"}>
-                                    <h2 className="station-title">Stations</h2>
                                     {stations ? (
                                         stations.map((station, index) => (
                                             <Accordion
