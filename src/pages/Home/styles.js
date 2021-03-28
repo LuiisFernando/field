@@ -46,7 +46,7 @@ export const Modal = styled.div`
             display: flex;
             flex-direction: column;
 
-            h2 {
+            h2.station-title {
                 padding-left: 25px;
                 margin-bottom: 20px;
                 font-size: 20px;
