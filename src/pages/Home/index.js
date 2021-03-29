@@ -121,7 +121,7 @@ function Home() {
                                     <p><span>City:</span> {selectedNetwork.location.city}</p>
                                     <p><span>{selectedNetwork.company && selectedNetwork.company.length === 1 ? 'Company' : 'Companies'}:</span> {selectedNetwork.company ? selectedNetwork.company.join(', ') : 'no company'}</p>
                                     <p><span>Total Networks of this country:</span> {countNetworkByCountry}</p>
-                                    <p><span>Total stations of this network:</span> {stations ? stations.length : 0}</p>
+                                    <p><span>Total Stations of this network:</span> {stations ? stations.length : 0}</p>
                                 </div>
 
 
@@ -138,7 +138,7 @@ function Home() {
                                             />
                                         )
                                         )) : (
-                                        <h2>There's no station to this network</h2>
+                                        <h2>There's no stations to this network</h2>
                                     )}
                                 </div>
 
