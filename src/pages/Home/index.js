@@ -59,13 +59,13 @@ function Home() {
 
         const stationResponse = await api.get(network.href);
 
-        const stati = stationResponse.data.network.stations.length > 0 ? stationResponse.data.network.stations.map(station => {
+        const station = stationResponse.data.network.stations.length > 0 ? stationResponse.data.network.stations.map(station => {
             return {
                 ...station,
                 open: false
             }
         }) : null;
-        setStations(stati);
+        setStations(station);
         setSelectedNetwork(network);
         setShowModal(true);
         setCountNetworkByContry(networkCountry.count);
