@@ -19,7 +19,7 @@ export const Modal = styled.div`
         max-width: 900px;
         width: 900px;
         height: 70vh;
-        background: #f2f2f2;
+        background: #F2F2F2;
         border-radius: 10px;
         margin: 0 auto;
         margin-top: 100px;
@@ -92,7 +92,7 @@ export const Modal = styled.div`
                 width: 5px;
             }
             ::-webkit-scrollbar-track {
-                background: #f1f1f1; 
+                background: #F1F1F1; 
             }
             
             ::-webkit-scrollbar-thumb {
@@ -106,6 +106,10 @@ export const Modal = styled.div`
 
         .no-station {
             margin: 150px auto;
+
+            h2 {
+                color: #D3D3D3;
+            }
 
             .station-title {
                 display: none;
